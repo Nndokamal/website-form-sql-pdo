@@ -16,6 +16,9 @@ $stml->bindParam(4,$status);
 $stml->bindParam(5,$tglmasuk);
 $stml->bindParam(6,$file);
 $stml->execute();
+
+unlink("uploads/$file");
+
 echo "berhasil dihapus";
 echo "<a href='halamanUtama.php'>kembali kemenu utama</a>";
 $db = null;

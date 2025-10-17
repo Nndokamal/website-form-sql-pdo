@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="edit2.php" method="POST">
+    <form action="edit2.php" method="POST" enctype="multipart/form-data">
         <h1>data sebelum:</h1>
         nama: </br> <input type="text" name="namaget" value="<?php echo $_GET['nama'] ?>" readonly></br>
         noinduk: </br> <input type="text" name="noindukget" value="<?php echo $_GET['noinduk'] ?>" readonly></br>

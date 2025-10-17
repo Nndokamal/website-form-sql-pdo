@@ -36,11 +36,11 @@ function tampilsemua(){
 }
 function caritampil($datacari){
   global $db;
-  $sql = "SELECT * FROM kumpulantabel WHERE nama = '$datacari'";
+  $sql = "SELECT * FROM kumpulantabel WHERE nama = ?";
   $stmt = $db->prepare($sql);
+  $stmt->bindparam(1, $datacari);
   $stmt->execute();
   $hasildata = $stmt->fetchall();
-  $kumpulantabel = $db->query($sql);
   echo "<table><tr>
       <th>nama</th>
       <th>noinduk</th>
@@ -51,7 +51,7 @@ function caritampil($datacari){
       <th>edit</th>
       <th>delete</th>
     </tr>";
-  foreach($kumpulantabel as $tabel){
+  foreach($hasildata as $tabel){
       echo "
     <tr>
       <th>$tabel[nama]</th>
@@ -83,7 +83,7 @@ function caritampil($datacari){
     </style>
 </head>
 <body>
-    <form action="insert.php" method="POST">
+    <form action="insert.php" method="POST" enctype="multipart/form-data">
         <label for="nama">nama:</label></br>
         <input type="text" name="nama" id="nama"></br>
         <label for="noinduk">noinduk:</label></br>
@@ -103,7 +103,7 @@ function caritampil($datacari){
         <button type="submit">simpan</button>
         <h1>kumpulan data</h1>
     </form>   
-    <form action="" method="POST">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
       <label for="nama">nama:</label>
       <input type="text" name="nama" id="nama">
       <button>cari/refresh</button>
@@ -133,11 +133,11 @@ if ($data){
   caritampil($hasilcari);
 } else{
   echo "tidak ada data yang dicari";
-  tampilsemua();
 }
 } else{
   tampilsemua();
 }
+$db = null;
 ?>
 </body>
 </html>
