@@ -1,0 +1,37 @@
+/* ======== RESET DASAR ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  padding: 30px;
+  line-height: 1.5;
+}
+
+/* ======== KONTINER FORM UTAMA ======== */
+.kontiner {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.form1{
+    display: flex;
+    flex-direction: column;
+}
+
+table{
+    width: 100%;
+}
+th{
+    background-color: rgb(184, 169, 169);
+    border: 1px solid black;
+}
