@@ -7,7 +7,7 @@ function tampilsemua(){
   $stmt = $db->prepare($sql);
   $stmt->execute();
   $hasildata = $stmt->fetchall();
-  echo "<table><tr>
+  echo "<table><tr class='trAtas'>
       <th>nama</th>
       <th>noinduk</th>
       <th>jabatan</th>
@@ -77,6 +77,10 @@ function caritampil($datacari){
     <link rel="stylesheet" href="stylehalaman.css">
 </head>
 <body>
+  <ul class="navigasi">
+    <li><a href="halamanutama.php">input</a></li>
+    <li><a href="halamandata.php">informasi data</a></li>
+  </ul>
   <div class="kontiner">
     <form class="form1" action="insert.php" method="POST" enctype="multipart/form-data">
         <label for="nama">nama:</label>
@@ -97,8 +101,9 @@ function caritampil($datacari){
         <input type="file" name="file" id="file">
         <button type="submit">simpan</button>
       </form>
-  </div>   
-      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+  </div>
+
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
       <h1>kumpulan data</h1>
       <label for="nama">nama:</label>
       <input type="text" name="nama" id="nama">
