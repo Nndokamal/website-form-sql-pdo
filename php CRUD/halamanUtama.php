@@ -74,36 +74,32 @@ function caritampil($datacari){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-    </style>
+    <link rel="stylesheet" href="stylehalaman.css">
 </head>
 <body>
-    <form action="insert.php" method="POST" enctype="multipart/form-data">
-        <label for="nama">nama:</label></br>
-        <input type="text" name="nama" id="nama"></br>
-        <label for="noinduk">noinduk:</label></br>
-        <input type="text" name="noinduk" id="noinduk"></br>
-        <label for="jabatan">jabatan:</label></br>
-        <input type="text" name="jabatan" id="jabatan"></br>
-        <label for="nama">status:</label></br>         
+  <div class="kontiner">
+    <form class="form1" action="insert.php" method="POST" enctype="multipart/form-data">
+        <label for="nama">nama:</label>
+        <input type="text" name="nama" id="nama">
+        <label for="noinduk">noinduk:</label>
+        <input type="text" name="noinduk" id="noinduk">
+        <label for="jabatan">jabatan:</label>
+        <input type="text" name="jabatan" id="jabatan">
+        <label for="nama">status:</label>         
         <select name="status" id="status">
             <option value="non staff">non staff</option>
             <option value="staff">staff</option>
             <option value="pkl">pkl</option>
-        </select></br>
-        <label for="tglmasuk">tglmasuk:</label></br>
-        <input type="date" name="tglmasuk" id="tglmasuk"></br>
-        <label for="file">upload file:</label></br>
-        <input type="file" name="file" id="file"></br>
+        </select>
+        <label for="tglmasuk">tglmasuk:</label>
+        <input type="date" name="tglmasuk" id="tglmasuk">
+        <label for="file">upload file:</label>
+        <input type="file" name="file" id="file">
         <button type="submit">simpan</button>
-        <h1>kumpulan data</h1>
-    </form>   
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+      </form>
+  </div>   
+      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+      <h1>kumpulan data</h1>
       <label for="nama">nama:</label>
       <input type="text" name="nama" id="nama">
       <button>cari/refresh</button>
