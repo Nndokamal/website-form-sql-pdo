@@ -38,6 +38,6 @@ try {
 } catch(PDOException $e) {
     echo $sql . "<br>" . $e->getMessage();
 }
-echo "<a href='halamanUtama.php'>kembali kemenu utama</a>";
+echo "<a href='halamanForm.php'>kembali kemenu utama</a>";
 $db = null;
 ?>

@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+body{
+    height: 100vh;
+    background: linear-gradient(to top right, gray, coral);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.nav{
+    background-color: yellow;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigasi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigasi li{
+    list-style: none;
+    padding: 0 10px;
+}
+.navigasi li a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+        
+.kontiner {
+    max-width: 600px;
+    margin: 10vh auto;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.4);
+    border: 1px solid black;
+}
+    
+.kontiner .form1{
+    display: flex;
+    flex-direction: column;
+}
+.kontiner .form1 input{
+    border: none;
+    background-color: rgba(217, 215, 215, 0.829);
+    margin-top: 1vh;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.329);
+}
+.kontiner .form1 label{
+    font-size:1.25rem;
+    font-weight: bold;
+
+}
+.kontiner .form1 input[type='text'], .kontiner .form1 select[name='status'], .kontiner .form1 input[type='date']{
+    height: 1.5rem;
+}

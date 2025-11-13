@@ -20,6 +20,6 @@ $stml->execute();
 unlink("uploads/$file");
 
 echo "berhasil dihapus";
-echo "<a href='halamanUtama.php'>kembali kemenu utama</a>";
+echo "<a href='halamanTabel.php'>kembali kemenu data</a>";
 $db = null;
 ?>

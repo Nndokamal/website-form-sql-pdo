@@ -41,7 +41,7 @@ $stmt->bindParam(5,$tglmasuk);
 $stmt->bindParam(6,$file_name);
 $stmt->execute();
 echo "berhasil diedit";
-echo "<a href='halamanUtama.php'>kembali kemenu utama</a>";    
+echo "<a href='halamanTabel.php'>kembali kemenu data</a>";    
     
 $db= null;
 ?>
