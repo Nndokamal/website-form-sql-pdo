@@ -18,8 +18,9 @@ $stml->bindParam(6,$file);
 $stml->execute();
 
 unlink("uploads/$file");
-
-echo "berhasil dihapus";
-echo "<a href='halamanTabel.php'>kembali kemenu data</a>";
+echo "<script>
+alert('hapus berhasil');
+window.location.href = 'halamanTabel.php';
+</script>";
 $db = null;
 ?>

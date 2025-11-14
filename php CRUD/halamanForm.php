@@ -9,8 +9,8 @@
 <body>
   <div class="nav">
     <ul class="navigasi">
+      <li><a href="halamanTabel.php">home</a></li>
       <li><a href="halamanForm.php">input</a></li>
-      <li><a href="halamanTabel.php">informasi data</a></li>
     </ul>
   </div>
   <div class="kontiner">
